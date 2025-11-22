@@ -1,5 +1,5 @@
 import React from 'react';
-import { Edit, Mail, Phone, MapPin, Calendar, Tag } from 'lucide-react';
+import { Edit, Mail, Phone, MapPin, Calendar, Tag, FileText } from 'lucide-react';
 import { Customer } from '../../types/customer';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
@@ -8,9 +8,10 @@ import { Badge } from '../ui/Badge';
 interface ProfileViewProps {
   customer: Customer;
   onEdit: () => void;
+  onCreateOrder?: () => void;
 }
 
-export const ProfileView: React.FC<ProfileViewProps> = ({ customer, onEdit }) => {
+export const ProfileView: React.FC<ProfileViewProps> = ({ customer, onEdit, onCreateOrder }) => {
   const formatDate = (dateString?: string) => {
     if (!dateString) return '-';
     return new Date(dateString).toLocaleDateString('ko-KR');
@@ -22,9 +23,16 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ customer, onEdit }) =>
       <Card
         title="기본 정보"
         headerAction={
-          <Button variant="outline" size="sm" icon={Edit} onClick={onEdit}>
-            수정
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" size="sm" icon={Edit} onClick={onEdit}>
+              수정
+            </Button>
+            {onCreateOrder && (
+              <Button variant="primary" size="sm" icon={FileText} onClick={onCreateOrder}>
+                주문서작성
+              </Button>
+            )}
+          </div>
         }
       >
         <div className="grid grid-cols-2 gap-6">

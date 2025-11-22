@@ -5,8 +5,9 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
   error?: string;
   hint?: string;
-  options: { value: string; label: string }[];
+  options?: { value: string; label: string }[];
   fullWidth?: boolean;
+  children?: React.ReactNode;
 }
 
 export const Select: React.FC<SelectProps> = ({
@@ -16,6 +17,7 @@ export const Select: React.FC<SelectProps> = ({
   options,
   fullWidth = true,
   className,
+  children,
   ...props
 }) => {
   return (
@@ -35,12 +37,18 @@ export const Select: React.FC<SelectProps> = ({
         )}
         {...props}
       >
-        <option value="">선택하세요</option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
+        {options ? (
+          <>
+            <option value="">선택하세요</option>
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </>
+        ) : (
+          children
+        )}
       </select>
 
       {error && (

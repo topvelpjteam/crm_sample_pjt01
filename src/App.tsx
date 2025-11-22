@@ -22,6 +22,9 @@ import { EditProfileModal } from './components/modals/EditProfileModal';
 import { OrderDetailModal } from './components/modals/OrderDetailModal';
 import { NewVOCModal } from './components/modals/NewVOCModal';
 import { EnterNoteModal } from './components/modals/EnterNoteModal';
+import { NewOrderModal } from './components/modals/NewOrderModal';
+import { PaymentModal } from './components/modals/PaymentModal';
+import { OrderDetailTabsModal } from './components/modals/OrderDetailTabsModal';
 
 // Data
 import {
@@ -53,9 +56,14 @@ function App() {
   const [isOrderDetailModalOpen, setIsOrderDetailModalOpen] = useState(false);
   const [isNewVOCModalOpen, setIsNewVOCModalOpen] = useState(false);
   const [isEnterNoteModalOpen, setIsEnterNoteModalOpen] = useState(false);
+  const [isNewOrderModalOpen, setIsNewOrderModalOpen] = useState(false);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const [isOrderDetailTabsModalOpen, setIsOrderDetailTabsModalOpen] = useState(false);
 
   // Selected data for modals
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
+  const [orderAmount, setOrderAmount] = useState(0);
+  const [selectedOrderNumber] = useState('');
 
   // Event handlers
   const handleSendMessage = () => {
@@ -131,11 +139,28 @@ function App() {
     setIsEditProfileModalOpen(true);
   };
 
+  const handleCreateOrder = () => {
+    setIsNewOrderModalOpen(true);
+  };
+
+  const handleOrderSubmit = (orderData: any) => {
+    console.log('Order data:', orderData);
+    setOrderAmount(orderData.products.reduce((sum: number, item: any) => sum + item.unitPrice * item.orderQuantity, 0));
+    setIsNewOrderModalOpen(false);
+    setIsPaymentModalOpen(true);
+  };
+
+  const handlePaymentComplete = (paymentData: any) => {
+    console.log('Payment data:', paymentData);
+    alert('주문이 완료되었습니다!');
+    setIsPaymentModalOpen(false);
+  };
+
   // Render content based on active view
   const renderContent = () => {
     switch (activeView) {
       case 'profile':
-        return <ProfileView customer={mockCustomer} onEdit={handleEditProfile} />;
+        return <ProfileView customer={mockCustomer} onEdit={handleEditProfile} onCreateOrder={handleCreateOrder} />;
       case 'orders':
         return <OrdersView orders={mockOrders} onOrderClick={handleOrderClick} />;
       case 'cs':
@@ -279,6 +304,27 @@ function App() {
           console.log('Save note:', data);
           alert('메모가 저장되었습니다!');
         }}
+      />
+
+      <NewOrderModal
+        isOpen={isNewOrderModalOpen}
+        onClose={() => setIsNewOrderModalOpen(false)}
+        customer={mockCustomer}
+        onSubmit={handleOrderSubmit}
+      />
+
+      <PaymentModal
+        isOpen={isPaymentModalOpen}
+        onClose={() => setIsPaymentModalOpen(false)}
+        customer={mockCustomer}
+        orderAmount={orderAmount}
+        onPaymentComplete={handlePaymentComplete}
+      />
+
+      <OrderDetailTabsModal
+        isOpen={isOrderDetailTabsModalOpen}
+        onClose={() => setIsOrderDetailTabsModalOpen(false)}
+        orderNumber={selectedOrderNumber}
       />
     </>
   );
