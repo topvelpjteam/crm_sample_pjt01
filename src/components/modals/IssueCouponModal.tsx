@@ -59,7 +59,7 @@ export const IssueCouponModal: React.FC<IssueCouponModalProps> = ({
         </>
       }
     >
-      <div className="space-y-5">
+      <div className="space-y-5 modal">
         {/* 고객 정보 */}
         <div className="p-4 bg-gray-50 rounded-lg">
           <h4 className="text-sm font-semibold text-gray-700 mb-2">발급 대상</h4>

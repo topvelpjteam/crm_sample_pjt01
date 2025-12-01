@@ -70,7 +70,7 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
   return (
     <div className="bg-white border-b border-gray-200">
       {/* 고객 기본 정보 섹션 */}
-      <div className="px-6 py-6 border-b border-gray-100">
+      <div className="px-6 py-6 border-b border-gray-100 content-header">
         <div className="flex items-start justify-between">
           {/* 좌측: 프로필 정보 */}
           <div className="flex items-start gap-4">
@@ -141,44 +141,44 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
       </div>
 
       {/* KPI 섹션 */}
-      <div className="px-6 py-4 bg-gray-50">
+      <div className="px-6 py-4 bg-gray-50 cont-box">
         <div className="grid grid-cols-5 gap-4">
           <div className="bg-white rounded-lg p-4 border border-gray-200">
-            <div className="flex items-center justify-between">
+            <div className="flex justify-between">
               <div>
-                <p className="text-xs text-gray-500 mb-1">고객 생애가치</p>
+                <p className="text-xs text-gray-700 font-bold mb-2">고객 생애가치</p>
                 <p className="text-xl font-bold text-gray-900">
                   {formatCurrency(customer.clv)}
                 </p>
               </div>
-              <div className="p-2 bg-purple-50 rounded-lg">
+              <div className="p-2 bg-purple-50 rounded-lg ico ico1">
                 <TrendingUp className="w-5 h-5 text-purple-600" />
               </div>
             </div>
           </div>
 
           <div className="bg-white rounded-lg p-4 border border-gray-200">
-            <div className="flex items-center justify-between">
+            <div className="flex justify-between">
               <div>
-                <p className="text-xs text-gray-500 mb-1">총 구매액</p>
+                <p className="text-xs text-gray-700 font-bold mb-2">총 구매액</p>
                 <p className="text-xl font-bold text-gray-900">
                   {formatCurrency(customer.totalSales)}
                 </p>
               </div>
-              <div className="p-2 bg-blue-50 rounded-lg">
+              <div className="p-2 bg-blue-50 rounded-lg ico ico2">
                 <ShoppingBag className="w-5 h-5 text-blue-600" />
               </div>
             </div>
           </div>
 
           <div className="bg-white rounded-lg p-4 border border-gray-200">
-            <div className="flex items-center justify-between">
+            <div className="flex justify-between">
               <div>
-                <p className="text-xs text-gray-500 mb-1">최근 구매일</p>
+                <p className="text-xs text-gray-700 font-bold mb-2">최근 구매일</p>
                 <p className="text-base font-bold text-gray-900">
                   {formatDate(customer.lastPurchaseDate)}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 mt-3">
                   {Math.floor(
                     (new Date().getTime() - new Date(customer.lastPurchaseDate).getTime()) /
                       (1000 * 60 * 60 * 24)
@@ -186,16 +186,16 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
                   일 전
                 </p>
               </div>
-              <div className="p-2 bg-green-50 rounded-lg">
+              <div className="p-2 bg-green-50 rounded-lg ico ico3">
                 <Calendar className="w-5 h-5 text-green-600" />
               </div>
             </div>
           </div>
 
           <div className="bg-white rounded-lg p-4 border border-gray-200">
-            <div className="flex items-center justify-between">
+            <div className="flex justify-between">
               <div>
-                <p className="text-xs text-gray-500 mb-1">이탈 위험도</p>
+                <p className="text-xs text-gray-700 font-bold mb-2">이탈 위험도</p>
                 <div className="flex items-center gap-2">
                   <p className="text-xl font-bold text-gray-900">
                     {customer.churnRiskScore}
@@ -208,22 +208,25 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
                   </Badge>
                 </div>
               </div>
-              <div className="p-2 bg-orange-50 rounded-lg">
+              <div className="p-2 bg-orange-50 rounded-lg ico ico4">
                 <AlertCircle className="w-5 h-5 text-orange-600" />
               </div>
             </div>
           </div>
 
           <div className="bg-white rounded-lg p-4 border border-gray-200">
-            <div className="flex items-center justify-between">
+            <div className="flex justify-between">
               <div>
-                <p className="text-xs text-gray-500 mb-1">가입 경로</p>
+                <p className="text-xs text-gray-700 font-bold mb-2">가입 경로</p>
                 <p className="text-base font-bold text-gray-900">
                   {customer.signupChannel}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 mt-3">
                   {formatDate(customer.createdAt)} 가입
                 </p>
+              </div>
+              <div className="p-2 bg-orange-50 rounded-lg ico ico5">
+                <MessageSquare className="w-5 h-5 text-blue-600" />
               </div>
             </div>
           </div>

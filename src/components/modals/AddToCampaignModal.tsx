@@ -51,7 +51,7 @@ export const AddToCampaignModal: React.FC<AddToCampaignModalProps> = ({
         </>
       }
     >
-      <div className="space-y-5">
+      <div className="space-y-5 modal">
         {/* 고객 정보 */}
         <div className="p-4 bg-gray-50 rounded-lg">
           <h4 className="text-sm font-semibold text-gray-700 mb-2">등록 대상 고객</h4>
@@ -115,7 +115,7 @@ export const AddToCampaignModal: React.FC<AddToCampaignModalProps> = ({
 
         {/* 안내 */}
         <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-          <p className="text-xs text-yellow-800">
+          <p className="text-xs text-blue-800">
             💡 캠페인에 등록된 고객은 캠페인 발송 시점에 자동으로 메시지를 받게 됩니다.
           </p>
         </div>

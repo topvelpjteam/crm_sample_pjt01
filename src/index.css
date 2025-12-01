@@ -14,8 +14,39 @@
     --color-border-focus: #3b82f6;
   }
 
+  @font-face {
+    font-family:'Pretendard';
+    font-style:normal;
+    font-weight:300;
+    src: url(/assets/font/Pretendard-Light.woff) format('woff');
+  }
+  @font-face {
+    font-family:'Pretendard';
+    font-style:normal;
+    font-weight:400;
+    src: url(/assets/font/Pretendard-Regular.woff) format('woff');
+  }
+  @font-face {
+    font-family:'Pretendard';
+    font-style:normal;
+    font-weight:500;
+    src: url(/assets/font/Pretendard-Medium.woff) format('woff');
+  }
+  @font-face {
+    font-family:'Pretendard';
+    font-style:normal;
+    font-weight:600;
+    src: url(/assets/font/Pretendard-SemiBold.woff) format('woff');
+  }
+  @font-face {
+    font-family:'Pretendard';
+    font-style:normal;
+    font-weight:700;
+    src: url(/assets/font/Pretendard-Bold.woff) format('woff');
+  }
+
   * {
-    @apply border-gray-200;
+    @apply border-gray-200; font-family:'Pretendard';
   }
 
   body {
@@ -165,3 +196,46 @@
   background-size: 1000px 100%;
 }
 
+.wrap-screen {background-color: #f5f5f5;}
+.header {background-color: #014a97;}
+.header h1 {color: #fff;}
+.header .text-gray-900 {color: #fff;}
+.header .text-gray-500 {color: #b5c2dd;}
+.header .transition-colors {background-color: #bad7f5;}
+.header .rounded-full {background-color: #bad7f5;}
+.content-header {background-color: #d4e4f5;border-color: #c7d6e3;}
+.cont-box {background-color: #ccdced;}
+.cont-box .border-gray-200 {border-color: #c1cedb;}
+.cont-box .bg-white {padding: 1.3rem 1rem;}
+.cont-box .ico {width:70px;height:70px;background-color: #ebebeb; display: flex;justify-content: center;align-items: center;}
+.cont-box .ico svg {width:42px;height:42px;}
+.cont-box .text-xl {font-size: 1.8rem;letter-spacing:-1px;}
+.cont-box .text-base {font-size: 1.8rem;letter-spacing:-1px;}
+.cont-box .text-xs {font-size: 0.95rem;}
+.cont-box .bg-white:last-child .text-base {font-size: 1.6rem;}
+.aside-lnb .bg-primary-50 {background-color: #ccdced;color: #3659c0;}
+.aside-lnb .text-primary-600 {color: #3659c0;}
+.aside-lnb .text-xs {font-size: 0.9rem;color:#555;font-weight: 600;}
+.aside-lnb .text-sm {font-size: 0.85rem;}
+main h3.text-lg {font-size: 1.3rem;letter-spacing: -1.5px;}
+main .btn-sm {font-size: 0.9rem;}
+main .grid label.text-sm {font-size: 0.9rem;color: #333;font-weight: 600;}
+.btn {border-radius: 0.2rem;font-size: 0.9rem;white-space: nowrap;}
+.btn:focus {outline-offset:0;--tw-ring-offset-shadow:none;--tw-ring-shadow:none;box-shadow: none;}
+.badge {white-space: nowrap;}
+.aside-quick h3.text-sm {font-size: 1.1rem;}
+.aside-quick h4.text-xs {font-size: 0.9rem;}
+.aside-quick p.text-xs {font-size: 0.9rem;}
+.aside-quick .text-xs span {font-size: 0.85rem;}
+.modal .rounded-lg {background-color:#e3effb;--tw-gradient-to:none;}
+.modal .rounded-lg .border-yellow-200 {border-color: #b6cee7;}
+.modal .rounded-lg .bg-primary-100 {background-color: #435376;color: #fff;}
+.modal .rounded-lg .text-blue-800 {font-size: 0.85rem;}
+.modal .rounded-lg .text-blue-700 {font-size: 0.85rem;}
+.modal .border-yellow-200 {border-color: #b6cee7;}
+.modal .input {background-color:#fff;}
+.btn-primary {background-color: #5776b9;}
+table thead th {border-bottom: 1px solid #d1d5db;}
+.mt0 {margin-top: 0 !important;}
+.bbline {border-bottom: 1px solid #dfdfdf;background: #f5f5f5;padding:5px 10px;}
+.text-xs {font-size: 0.9rem;}

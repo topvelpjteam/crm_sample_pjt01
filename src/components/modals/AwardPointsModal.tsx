@@ -49,7 +49,7 @@ export const AwardPointsModal: React.FC<AwardPointsModalProps> = ({
         </>
       }
     >
-      <div className="space-y-5">
+      <div className="space-y-5 modal">
         {/* 고객 정보 */}
         <div className="p-4 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg">
           <div className="flex items-center gap-3 mb-3">

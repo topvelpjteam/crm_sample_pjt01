@@ -32,7 +32,7 @@ export const Timeline: React.FC<TimelineProps> = ({ items, className }) => {
         const isLast = index === items.length - 1;
 
         return (
-          <div key={item.id} className="relative flex gap-4">
+          <div key={item.id} className="relative flex gap-4 mt0">
             {/* Timeline line */}
             {!isLast && (
               <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-gray-200" />

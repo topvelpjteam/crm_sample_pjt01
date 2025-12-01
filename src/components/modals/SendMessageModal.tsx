@@ -74,7 +74,7 @@ export const SendMessageModal: React.FC<SendMessageModalProps> = ({
         </>
       }
     >
-      <div className="space-y-6">
+      <div className="space-y-6 modal">
         {/* 고객 정보 */}
         <div className="p-4 bg-gray-50 rounded-lg">
           <h4 className="text-sm font-semibold text-gray-700 mb-2">고객 정보</h4>

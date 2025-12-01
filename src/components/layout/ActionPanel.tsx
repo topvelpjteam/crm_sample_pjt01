@@ -20,7 +20,7 @@ export const ActionPanel: React.FC<ActionPanelProps> = ({
   onAddRecord,
 }) => {
   return (
-    <div className="w-64 bg-white border-l border-gray-200 p-4 flex flex-col gap-3">
+    <div className="w-64 bg-white border-l border-gray-200 p-4 flex flex-col gap-3 aside-quick">
       <div className="mb-2">
         <h3 className="text-sm font-semibold text-gray-900 mb-1">Quick Actions</h3>
         <p className="text-xs text-gray-500">고객 대상 즉시 실행</p>

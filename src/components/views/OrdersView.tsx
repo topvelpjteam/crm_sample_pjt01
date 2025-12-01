@@ -199,7 +199,7 @@ export const OrdersView: React.FC<OrdersViewProps> = ({ orders, onOrderClick }) 
               const monthTotal = monthOrders.reduce((sum, o) => sum + o.totalAmount, 0);
 
               return (
-                <div key={month} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div key={month} className="flex items-center justify-between bg-gray-50 rounded-lg">
                   <span className="text-sm text-gray-600">{month}</span>
                   <div className="text-right">
                     <p className="text-sm font-medium text-gray-900">

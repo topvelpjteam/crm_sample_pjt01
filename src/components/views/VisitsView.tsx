@@ -172,7 +172,7 @@ export const VisitsView: React.FC<VisitsViewProps> = ({ visits, onVisitClick }) 
               ).length;
 
               return (
-                <div key={purpose} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div key={purpose} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg mt0">
                   <span className="text-sm text-gray-900 font-medium">{purpose}</span>
                   <div className="text-right">
                     <p className="text-sm font-semibold text-gray-900">{purposeVisits.length}회</p>

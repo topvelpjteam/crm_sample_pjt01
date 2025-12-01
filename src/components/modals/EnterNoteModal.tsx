@@ -51,7 +51,7 @@ export const EnterNoteModal: React.FC<EnterNoteModalProps> = ({
         </>
       }
     >
-      <div className="space-y-5">
+      <div className="space-y-5 modal">
         {/* 고객 정보 */}
         <div className="p-4 bg-gray-50 rounded-lg">
           <h4 className="text-sm font-semibold text-gray-700 mb-2">메모 대상</h4>
@@ -112,7 +112,7 @@ export const EnterNoteModal: React.FC<EnterNoteModalProps> = ({
 
         {/* 안내 */}
         <div className="p-3 bg-gray-50 rounded-lg">
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-blue-800">
             💡 메모는 팀 내에서 공유되며, 고객 이력 관리에 활용됩니다.
           </p>
         </div>

@@ -107,7 +107,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   };
 
   return (
-    <div className="w-64 bg-white border-r border-gray-200 flex flex-col h-full">
+    <div className="w-64 bg-white border-r border-gray-200 flex flex-col h-full aside-lnb">
       {/* 검색 */}
       <div className="p-4 border-b border-gray-200">
         <form onSubmit={handleSearch}>

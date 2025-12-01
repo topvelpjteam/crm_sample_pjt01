@@ -219,8 +219,8 @@ export const MarketingView: React.FC<MarketingViewProps> = ({
                 channelSent > 0 ? (channelConverted / channelSent) * 100 : 0;
 
               return (
-                <div key={channel} className="p-4 bg-gray-50 rounded-lg">
-                  <div className="flex items-center justify-between mb-3">
+                <div key={channel} className="p-4 bg-gray-50 rounded-lg mt0">
+                  <div className="flex items-center justify-between mb-3 bbline">
                     <Badge variant={getChannelBadgeVariant(channel)} size="lg">
                       {channel}
                     </Badge>

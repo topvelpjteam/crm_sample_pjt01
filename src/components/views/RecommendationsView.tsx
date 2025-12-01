@@ -104,9 +104,9 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({
                 className="relative overflow-hidden rounded-xl border-2 border-gray-200 bg-white hover:shadow-lg transition-all"
               >
                 {/* Priority Badge */}
-                <div className="absolute top-4 left-4 z-10">
+                <div className="absolute top-0 left-4 z-10">
                   <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full shadow-md">
-                    <span className="text-2xl font-bold text-primary-600">#{index + 1}</span>
+                    <span className="text-l font-bold text-primary-600">#{index + 1}</span>
                     <span className="text-xs font-medium text-gray-600">우선순위</span>
                   </div>
                 </div>

@@ -191,7 +191,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ customer, onEdit, onCr
       {/* 동의 현황 */}
       <Card title="동의 현황">
         <div className="space-y-4">
-          <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+          <div className="flex items-center justify-between bg-gray-50 rounded-lg">
             <div>
               <p className="font-medium text-gray-900">마케팅 수신 동의</p>
               <p className="text-sm text-gray-500 mt-1">SMS, 이메일, 카카오톡</p>
@@ -199,7 +199,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ customer, onEdit, onCr
             <Badge variant="success">동의</Badge>
           </div>
 
-          <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+          <div className="flex items-center justify-between bg-gray-50 rounded-lg">
             <div>
               <p className="font-medium text-gray-900">개인정보 수집 및 이용</p>
               <p className="text-sm text-gray-500 mt-1">필수</p>
@@ -207,7 +207,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ customer, onEdit, onCr
             <Badge variant="success">동의</Badge>
           </div>
 
-          <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+          <div className="flex items-center justify-between bg-gray-50 rounded-lg">
             <div>
               <p className="font-medium text-gray-900">제3자 정보 제공</p>
               <p className="text-sm text-gray-500 mt-1">선택</p>

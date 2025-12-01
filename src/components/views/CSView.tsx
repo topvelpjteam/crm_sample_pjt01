@@ -96,7 +96,7 @@ export const CSView: React.FC<CSViewProps> = ({ vocs, onNewVOC, onVOCClick }) =>
     {
       key: 'priority',
       title: '우선순위',
-      width: '80px',
+      width: '100px',
       align: 'center' as const,
       render: (value: VOC['priority']) => getPriorityIcon(value),
     },
@@ -265,7 +265,7 @@ export const CSView: React.FC<CSViewProps> = ({ vocs, onNewVOC, onVOCClick }) =>
               const percentage = totalVOC > 0 ? (channelVocs.length / totalVOC) * 100 : 0;
 
               return (
-                <div key={channel} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div key={channel} className="flex items-center justify-between bg-gray-50 rounded-lg">
                   <span className="text-sm text-gray-600">{channel}</span>
                   <div className="text-right">
                     <p className="text-sm font-medium text-gray-900">{channelVocs.length}건</p>

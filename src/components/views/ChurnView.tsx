@@ -18,7 +18,7 @@ export const ChurnView: React.FC<ChurnViewProps> = ({ churnRisk, onRiskDriverCli
       case 'Medium':
         return 'text-yellow-600 bg-yellow-50 border-yellow-200';
       case 'Low':
-        return 'text-green-600 bg-green-50 border-green-200';
+        return 'text-blue-600 bg-blue-50 border-blue-200';
       default:
         return 'text-gray-600 bg-gray-50 border-gray-200';
     }
@@ -255,9 +255,9 @@ export const ChurnView: React.FC<ChurnViewProps> = ({ churnRisk, onRiskDriverCli
             </>
           ) : (
             <>
-              <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-sm font-medium text-green-900 mb-2">현재 상태 양호</p>
-                <ul className="text-sm text-green-700 space-y-1 list-disc list-inside">
+              <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <p className="text-sm font-medium text-blue-900 mb-2">현재 상태 양호</p>
+                <ul className="text-sm text-blue-700 space-y-1 list-disc list-inside">
                   <li>정기적인 혜택 제공으로 관계 유지</li>
                   <li>고객 만족도 지속 모니터링</li>
                   <li>VIP 등급 승급 검토</li>
