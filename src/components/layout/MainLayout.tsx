@@ -37,11 +37,10 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
       <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between flex-shrink-0 header">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">C</span>
+            <div className="flex items-center justify-center logo">
             </div>
             <h1 className="text-xl font-bold text-gray-900">
-              360° Customer Journey Management
+              고객관리(주문/상담)
             </h1>
           </div>
         </div>

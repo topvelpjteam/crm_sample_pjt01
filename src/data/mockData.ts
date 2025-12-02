@@ -6,7 +6,7 @@ export const mockCustomer: Customer = {
   name: '김지민',
   email: 'jimin.kim@example.com',
   phone: '010-1234-5678',
-  avatar: 'https://i.pravatar.cc/150?u=jimin',
+  avatar: '/dist/assets/images/jimin_photo.jpg',
   membershipGrade: 'VIP',
   lifecycleStage: 'Active',
   clv: 15800000,

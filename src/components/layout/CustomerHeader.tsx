@@ -143,7 +143,7 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
       {/* KPI 섹션 */}
       <div className="px-6 py-4 bg-gray-50 cont-box">
         <div className="grid grid-cols-5 gap-4">
-          <div className="bg-white rounded-lg p-4 border border-gray-200">
+          <div className="bg-white rounded-lg p-4 border border-gray-200 item-box1">
             <div className="flex justify-between">
               <div>
                 <p className="text-xs text-gray-700 font-bold mb-2">고객 생애가치</p>
@@ -157,7 +157,7 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
             </div>
           </div>
 
-          <div className="bg-white rounded-lg p-4 border border-gray-200">
+          <div className="bg-white rounded-lg p-4 border border-gray-200 item-box2">
             <div className="flex justify-between">
               <div>
                 <p className="text-xs text-gray-700 font-bold mb-2">총 구매액</p>
@@ -171,7 +171,7 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
             </div>
           </div>
 
-          <div className="bg-white rounded-lg p-4 border border-gray-200">
+          <div className="bg-white rounded-lg p-4 border border-gray-200 item-box3">
             <div className="flex justify-between">
               <div>
                 <p className="text-xs text-gray-700 font-bold mb-2">최근 구매일</p>
@@ -192,7 +192,7 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
             </div>
           </div>
 
-          <div className="bg-white rounded-lg p-4 border border-gray-200">
+          <div className="bg-white rounded-lg p-4 border border-gray-200 item-box4">
             <div className="flex justify-between">
               <div>
                 <p className="text-xs text-gray-700 font-bold mb-2">이탈 위험도</p>
@@ -214,7 +214,7 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({
             </div>
           </div>
 
-          <div className="bg-white rounded-lg p-4 border border-gray-200">
+          <div className="bg-white rounded-lg p-4 border border-gray-200 item-box5">
             <div className="flex justify-between">
               <div>
                 <p className="text-xs text-gray-700 font-bold mb-2">가입 경로</p>
