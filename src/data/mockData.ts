@@ -6,7 +6,7 @@ export const mockCustomer: Customer = {
   name: '김지민',
   email: 'jimin.kim@example.com',
   phone: '010-1234-5678',
-  avatar: '/public/images/jimin_photo.jpg',
+  avatar: '/assets/images/jimin_photo.jpg',
   membershipGrade: 'VIP',
   lifecycleStage: 'Active',
   clv: 15800000,
